@@ -1,8 +1,8 @@
 import { all, call,  put, takeEvery } from 'redux-saga/effects';
 
-const delay = (ms) => new Promise(res => setTimeout(res, ms));
+export const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
-function* incrementAsync() {
+export function* incrementAsync() {
   //call tells the middleware to invoke the (function, ...args)
   yield call(delay, 1000)
   // put dispatches the arg to the redux store
